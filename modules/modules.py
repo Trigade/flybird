@@ -32,11 +32,11 @@ class Pipes(pygame.sprite.Sprite):
             self.kill()
 
 class TopPipes(pygame.sprite.Sprite):
-    def __init__(self, x,alfa, renk=(0, 102, 0)):
+    def __init__(self, x,alfa):
             super().__init__()
             self.boy = 500
             self.image = pygame.image.load(r"images\pipe.png").convert_alpha()
-            self.image = pygame.transform.scale(self.image, (100, self.boy))
+            self.image = pygame.transform.scale(self.image, (100, self.boy-100))
             self.rect = self.image.get_rect(midbottom=(x, alfa))
             self.hiz = 3
 
